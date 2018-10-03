@@ -43,8 +43,6 @@ public class UserInterface extends JFrame {
     public UserInterface() {
         this.setPreferredSize(new Dimension(500, 235));
         this.setTitle("Password Strength Tester");
-//        this.setLayout(new BorderLayout());
-//        this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 
         setupMenu();
 
@@ -164,12 +162,6 @@ public class UserInterface extends JFrame {
         c.anchor = GridBagConstraints.CENTER;
         mainPanel.add(passwordField, c);
 
-//        c = new GridBagConstraints();
-//        c.gridx = 0;
-//        c.gridy = 3;
-//        c.anchor = GridBagConstraints.LINE_START;
-//        mainPanel.add(createReqsPanel(), c);
-
         c = new GridBagConstraints();
         c.gridx = 0;
         c.gridy = 2;
@@ -181,7 +173,6 @@ public class UserInterface extends JFrame {
     private JPanel setupBottomPanel() {
         JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(BLUE_BG);
-//        panel.setPreferredSize(new Dimension(5, 100));
         panel.add(createReqsPanel(), BorderLayout.LINE_START);
 
         JPanel rightPanel = new JPanel(new BorderLayout());
@@ -310,7 +301,6 @@ public class UserInterface extends JFrame {
                 mainPanel.setBackground(BLUE_BG);
             }
 
-//            crackTime.setText(model.getCrackTime() + " seconds");
             crackTime.setText(model.prettyCrackTime());
 
             int commonNumber = model.getCommonRange();
